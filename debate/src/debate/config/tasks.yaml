@@ -1,0 +1,30 @@
+proposal_task:
+  description: >
+    You are proposing the motion : {motion}.
+    Come up with a clear argument in favor of the motion.
+    Be very convincing.
+  expected_output: >
+    your clear and compelling argument in favor of the motion,
+  agent: debate_agent
+  output_file: output/proposal.md
+
+opposition_task:
+  description: >
+    You are opposing the motion : {motion}.
+    Come up with a clear argument against the motion.
+    Be very convincing.
+  expected_output: >
+    your clear and compelling argument against the motion,
+  agent: debater_opponent
+  output_file: output/opposition.md
+
+
+judge_task:
+  description: >
+    You are judging the debate on the motion : {motion}.
+    Evaluate the arguments presented by both debaters and determine the winner of the debate.
+    Consider the strength of the arguments, the use of evidence, and the overall persuasiveness of each debater's position.
+  expected_output: >
+    Your decision on which side is more convincing, and why.
+  agent: judge
+  output_file: output/judgement.md
