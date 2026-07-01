@@ -1,0 +1,36 @@
+movie_research_task:
+  description: >
+    Research the best movies for the category: {category}.
+
+    Find highly rated and popular movies based on:
+    - IMDb ratings
+    - Critic reviews
+    - Audience popularity
+    - Overall entertainment value
+
+    Include:
+    - Movie title
+    - Release year
+    - IMDb rating
+    - Genre
+    - Short recommendation reason
+
+  expected_output: >
+    A detailed list of top movie recommendations with ratings,
+    genres, release years, and recommendation reasons.
+
+  agent: movie_researcher
+
+
+movie_formatting_task:
+  description: >
+    Organize and format the researched movie recommendations
+    into a clean and attractive report for the user.
+
+  expected_output: >
+    A polished and readable movie recommendation report.
+
+  agent: movie_formatter
+
+  context:
+    - movie_research_task
